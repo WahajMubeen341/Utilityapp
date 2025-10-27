@@ -32,12 +32,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.utilityapp.R
 import com.example.utilityapp.ui.theme.UtilityAppTheme
 
 @Composable
-fun DiscountCalculatorScreen(navController: NavController) {
+fun DiscountCalculatorScreen(navController: NavHostController) {
     var price by remember { mutableStateOf("") }
     var discount by remember { mutableStateOf("") }
 

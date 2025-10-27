@@ -32,8 +32,13 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun UtilityAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+
+
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    // When enabled, it overrides your custom colors with system-generated colors
+    // based on the user's wallpaper. Set to 'false' to always use your own theme colors.
+    dynamicColor: Boolean = false,
+
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
