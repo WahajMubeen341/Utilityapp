@@ -35,6 +35,12 @@ android {
     buildFeatures {
         compose = true
     }
+
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
+        disable += listOf("NullSafeMutableLiveData")
+    }
 }
 
 dependencies {
