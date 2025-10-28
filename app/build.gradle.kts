@@ -50,6 +50,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    // Material Icons
+    implementation("androidx.compose.material:material-icons-core")
+    implementation("androidx.compose.material:material-icons-extended")
 //    implementation(libs.androidx.navigation.runtime.android)
 //    implementation(libs.androidx.navigation.compose.jvmstubs)
     implementation(libs.navigation.compose)
@@ -65,4 +68,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation("androidx.core:core-splashscreen:1.0.1")
+
+    implementation(project(":image-preview"))
+
 }

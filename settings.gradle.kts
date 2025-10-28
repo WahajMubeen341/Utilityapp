@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Utility app"
 include(":app")
- 
+include(":image-preview")
