@@ -1,5 +1,11 @@
  jdk:
    - openjdk11
 
-before_install:
-  - ./scripts/prepareJitpackEnvironment.sh
+#before_install:
+#  - ./scripts/prepareJitpackEnvironment.sh
+ 
+ before_install:
+   - echo "Building only library module"
+
+ install:
+   - ./gradlew :image-preview:assembleRelease :image-preview:publishToMavenLocal -xlint -xlintVitalAnalyzeRelease
