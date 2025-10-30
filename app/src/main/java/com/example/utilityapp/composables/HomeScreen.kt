@@ -39,6 +39,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -46,8 +47,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.image_preview.ImagePreview
 import com.example.utilityapp.R
+import com.example.utilityapp.components.ScreenTitle
 import com.example.utilityapp.ui.theme.Background
 import com.example.utilityapp.ui.theme.Primary
 import com.example.utilityapp.ui.theme.Secondary
@@ -78,21 +79,23 @@ fun HomeScreen(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         ) {
 
-        ImagePreview(
-            modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(1.5f)
-                .padding(8.dp),
-            imageUrl = "https://picsum.photos/500/300"
-        )
 
-        Text(
-            "Features",
-            color = MaterialTheme.colorScheme.primary,
-            style = MaterialTheme.typography.titleLarge,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(10.dp)
-        )
+//        ImagePreview(
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .aspectRatio(1.5f)
+//                .padding(8.dp),
+//            imageUrl = "https://picsum.photos/500/300"
+//        )
+
+        ScreenTitle(stringResource(id = R.string.features))
+//        Text(
+//            "Features",
+//            color = MaterialTheme.colorScheme.primary,
+//            style = MaterialTheme.typography.titleLarge,
+//            fontWeight = FontWeight.Bold,
+//            modifier = Modifier.padding(10.dp)
+//        )
 
         LazyColumn(
             modifier = Modifier

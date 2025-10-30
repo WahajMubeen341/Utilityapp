@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Utility app</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="features">Features</string>
+    <string name="enter_value">Enter value</string>
+    <string name="discount_calculator">Discount Calculator</string>
 </resources>

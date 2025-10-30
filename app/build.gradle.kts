@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.androidx.storage)
     implementation(libs.androidx.storage)
     implementation(libs.androidx.storage)
+    implementation(libs.ads.mobile.sdk)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,8 +68,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.coil.compose) // needed for utilityLibrary
     implementation("androidx.core:core-splashscreen:1.0.1")
 
-    implementation(project(":image-preview"))
+//    implementation(project(":image-preview"))
+//    implementation("com.github.WahajMubeen341:Utilityapp:1.0.3")
+//    implementation("com.github.WahajMubeen341:UtilityLibrary:1.0")
 
 }

@@ -26,6 +26,7 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -35,6 +36,8 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.utilityapp.R
+import com.example.utilityapp.components.BottomImage
+import com.example.utilityapp.components.ScreenTitle
 import com.example.utilityapp.ui.theme.UtilityAppTheme
 
 @Composable
@@ -55,13 +58,14 @@ fun DiscountCalculatorScreen(navController: NavHostController) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(
-                "Discount Calculator",
-                fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.padding(0.dp, 10.dp, 0.dp, 10.dp),
-                color = MaterialTheme.colorScheme.primary,
-                style = MaterialTheme.typography.titleLarge
-            )
+//            Text(
+//                "Discount Calculator",
+//                fontWeight = FontWeight.SemiBold,
+//                modifier = Modifier.padding(0.dp, 10.dp, 0.dp, 10.dp),
+//                color = MaterialTheme.colorScheme.primary,
+//                style = MaterialTheme.typography.titleLarge
+//            )
+            ScreenTitle(stringResource(id = R.string.discount_calculator))
 
             OutlinedTextField(
                 value = price,
@@ -89,13 +93,14 @@ fun DiscountCalculatorScreen(navController: NavHostController) {
 
 
             // Background Vector Image
-            Image(
-                painter = painterResource(id = R.drawable.discount_2), // your vector drawable
-                contentDescription = "Background",
-                modifier = Modifier.align(Alignment.End)
-                    .alpha(0.6f), // Optional: make it lighter so it doesn’t overpower text
-                contentScale = ContentScale.Fit, // or ContentScale.Fit depending on your vector
-            )
+            BottomImage(painterResource(id = R.drawable.discount_2))
+//            Image(
+//                painter = painterResource(id = R.drawable.discount_2), // your vector drawable
+//                contentDescription = "Background",
+//                modifier = Modifier.align(Alignment.End)
+//                    .alpha(0.6f), // Optional: make it lighter so it doesn’t overpower text
+//                contentScale = ContentScale.Fit, // or ContentScale.Fit depending on your vector
+//            )
 
         }
 }
